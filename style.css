@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); 
 
 *{
   box-sizing: border-box;
@@ -8,7 +8,7 @@
 
 body {
   font-family: "Poppins", sans-serif;
-  height: 3000px;
+  height: 7000px;
   padding-top: 70px;
 }
 
@@ -182,6 +182,8 @@ select {
   font-size: 49px;
   font-weight: 700;
   color: #490181;
+  font-family: "Montserrat", sans-serif;
+  text-shadow: 0px 5px 3px rgb(214, 214, 214);
 }
 
 .Earn-section-child p {
@@ -197,7 +199,7 @@ select {
 }
 
 .centered-content img {
-  width: 480px;
+  width: 460px;
 }
 
 .Earn-section-textcard {
@@ -205,6 +207,8 @@ select {
   margin: 40px 0;
   padding: 30px 30px;
   color: #ffff;
+  border-radius: 23px;
+  box-shadow: -1px 10px  0 rgb(255, 215, 76);
 }
 
 .Earn-section-textcard h3{
@@ -215,4 +219,149 @@ select {
 .Earn-section-textcard p {
   font-size: 16px;
   font-weight: 700;
+}
+
+.stop-payment-section {
+  background-color: rgb(240, 240, 255);
+}
+
+.stop-payment-section-child,
+.interest-section-child {
+  margin: 0 auto;
+  max-width: 1210px;
+  display: flex;
+  width: 100%;
+  gap: 15px;
+  flex-direction: row;
+  align-items: center;
+  padding: 120px 0;
+}
+
+.stop-payment-section-subchild {
+  padding: 24px;
+  text-align: left;
+  flex: 1;
+}
+
+
+.stop-payment-section-subchild h3,
+.intrest-payment-section-subchild2 h3,
+.credit-payment-section-subchild2 h3{
+  font-size: 50px;
+  font-weight: 700;
+  line-height: 62px;
+  letter-spacing: -1px;
+  color: rgb(73, 1, 129);
+  text-shadow: -1px 5px 2px rgb(216, 216, 229);
+  /* margin: 45px 0 40px; */
+  
+}
+
+.credit-payment-section-subchild2 {
+  padding-left: 20px;
+}
+
+.p1 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  color: rgb(73, 1, 129);
+  margin: 60px 0;
+  text-shadow: 0px 8px 3px rgb(205, 205, 218);
+}
+
+.stop-payment-section-subchild2,
+.intrest-payment-section-subchild {
+  object-fit: cover;
+  width: 570px;
+  height: 560px;
+  border-radius: 50px;
+}
+
+.span2 {
+  color: rgb(143, 0, 255);
+}
+
+.interest-section {
+  background-image: url(Images/backgroundimg2.png);
+}
+
+.interest-section-child {
+  text-align: right;
+  /* justify-content: right; */
+}
+
+.stop-payment,
+.interest {
+  background-color: rgb(143, 0, 255);
+  text-align: center;
+  padding: 15px 70px;
+  box-shadow: 7px 7px 0 rgb(255, 184, 0);
+}
+
+
+.credit {
+  background-color: rgb(143, 0, 255);
+  text-align: left;
+  padding: 15px 70px;
+  margin-top: 80px;
+  box-shadow: 7px 7px 0 rgb(255, 184, 0);
+  text-align: center;
+}
+
+.stop-payment-p2,
+.interest-p1 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #ffff;
+  display: inline;
+}
+
+.intrest-payment-section-subchild2 {
+  margin-left: 20px;
+}
+
+.coat-arm {
+  width: 55px;
+}
+
+.naij-dpic {
+  width: 100px;
+}
+
+.safe-space {
+  background-color: rgb(248, 248, 255);
+}
+
+.safe-space-child {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  width: 100%;
+  /* text-align: center; */
+  padding-top: 40px;
+  align-items: center;
+}
+
+.safe-space-child h2 {
+  font-size: 50px;
+  font-weight: 700;
+  color: rgb(73, 1, 129);
+  text-shadow: 2px 3px 0px rgb(209, 209, 214);
+}
+
+.safe-space-subchild {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+
+.safe-space-subchild-child2,
+.safe-space-subchild-child {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 60p
 }
