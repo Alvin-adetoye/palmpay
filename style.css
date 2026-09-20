@@ -22,8 +22,86 @@ nav {
   right: 0;
   background-color: #fff;
   height: 70px;
-  /* z-index: 1000; */
+  z-index: 1000;
 
+}
+
+.nav-child2,
+.nav-child6 {
+  position: relative;
+}
+
+.nav-child2:hover,
+.nav-child6:hover {
+  text-decoration: 3px solid underline rgb(143, 0, 254);
+  text-underline-offset: 27px;
+  /* padding-right: -70px; */
+}
+
+.nav-child2:hover .dropdown,
+.nav-child6:hover .dropdown,
+.nav-child8:hover .region-menu{
+  visibility: visible;
+  opacity: 1;
+}
+
+.dropdown::before,
+.region-menu::before {
+  content: "";
+  position: absolute;
+  top: -30px;    /* reaches up to touch the frame */
+  left: 0;
+  right: 0;
+  height: 30px;
+}
+
+.dropdown {
+  position: absolute;
+  list-style: none;
+  top: 290%;
+  left: 0;
+  background-color: white;
+  /* padding-right: 50px; */
+  padding: 30px 80px 30px 30px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  /* font-size: 14px; */
+  /* font-weight: 400; */
+  visibility: hidden;
+  opacity: 0;
+  text-wrap: nowrap;
+}
+
+.region-menu {
+  position: absolute;
+  list-style: none;
+  top: 200%;
+  left: -20px;
+  background-color: white;
+  /* padding-right: 50px; */
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* font-size: 14px; */
+  /* font-weight: 400; */
+  visibility: hidden;
+  opacity: 0;
+  text-wrap: nowrap;
+}
+.region-menu li:nth-child(2),
+.region-menu li:nth-child(3),
+.region-menu li:nth-child(4),
+.region-menu li:nth-child(5),
+.region-menu li:nth-child(6),
+.region-menu li:nth-child(7),
+.region-menu li:nth-child(8) {
+  background-color: rgb(246, 246, 250);
+  padding: 5px 70px 5px 5px;
+  border-radius: 20px;
 }
 
 .nav-child img {
@@ -53,27 +131,67 @@ nav {
 }
 
 .nav-child8 {
+  /* position: relative; */
+  display: flex;
+  align-items: center;
   position: relative;
-}
-
-.nav-child8 img {
-  width: 25px;
-  position: absolute;
-  top: 20%;
-  left: 5px;
-}
-
-select {
-  padding: 5px 15px 5px 30px;
   background-color: rgb(247, 247, 251);
+  padding: 5px 15px 5px 30px;
+  border-radius: 20px;
+  gap: 10px;
+  
+}
+
+.nav-child8 span {
+  display: flex;
+}
+
+.region-label {
+  text-decoration: none;
+  color: rgb(24, 25, 31);
+  font-weight: 500;
+  font-size: 15px;
+}
+/* 
+.region-menu {
+  position: absolute;
+  top: 100%;
+  list-style: none;
+  text-wrap: nowrap;
+} */
+
+.region-menu a {
+  text-decoration: none;
+  color: black;
+  font-size: 14px;
+}
+.nig-image {
+  width: 25px;
+  /* position: absolute; */
+  /* top: 20%;
+  left: 5px; */
+}
+.drop {
+  width: 15px;
+}
+
+li img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+/* select {
+  padding: 5px 15px 5px 30px;
+
   border: none;
   border-radius: 20px;
-}
+} */
 
 .hero-section {
   background-image: url(Images/herobackground.png);
   /* background-size: cover; */
   /* padding-top: 80px; */
+  padding-top: 30px;
 }
 
 .hero-section-child {
@@ -111,6 +229,7 @@ select {
   width: 400px;
   padding-bottom: 0px;
   margin-bottom: -10px;
+  margin-left: 100px;
 }
 
 .hero-section-subchild-child2 img{
@@ -154,11 +273,14 @@ select {
   background-color: rgb(111, 6, 192);
   display: flex;
   justify-content: center;
-  padding: 20px 0;
+  padding: 30px 0;
+  margin-top: -80px; 
+  position: relative;    /* I used position relative cause z-index only works on positined elemnts*/
+  z-index: 1;   /* z-index basically allows this section stay above the image leg */
 }
 
 .hero-section-child2 img {
-  width: 600px;
+  width: 900px;
 }
 
 .centered-content {
@@ -567,7 +689,6 @@ footer {
 
 .footer-child {
   display: flex;
-  display: row;
   justify-content: space-between;
 }
 
