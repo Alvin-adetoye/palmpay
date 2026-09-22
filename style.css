@@ -42,18 +42,10 @@ nav {
 .nav-child6:hover .dropdown,
 .nav-child8:hover .region-menu{
   visibility: visible;
-  opacity: 1;
+  opacity: 5;
 }
 
-.dropdown::before,
-.region-menu::before {
-  content: "";
-  position: absolute;
-  top: -30px;    /* reaches up to touch the frame */
-  left: 0;
-  right: 0;
-  height: 30px;
-}
+
 
 .dropdown {
   position: absolute;
@@ -72,6 +64,7 @@ nav {
   visibility: hidden;
   opacity: 0;
   text-wrap: nowrap;
+  transition: all 0.2s ease;
 }
 
 .region-menu {
@@ -91,6 +84,7 @@ nav {
   visibility: hidden;
   opacity: 0;
   text-wrap: nowrap;
+  transition: all 0.2s ease;
 }
 .region-menu li:nth-child(2),
 .region-menu li:nth-child(3),
@@ -131,10 +125,9 @@ nav {
 }
 
 .nav-child8 {
-  /* position: relative; */
+  position: relative;
   display: flex;
   align-items: center;
-  position: relative;
   background-color: rgb(247, 247, 251);
   padding: 5px 15px 5px 30px;
   border-radius: 20px;
