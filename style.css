@@ -11,6 +11,23 @@ body {
   padding-top: 70px;
 }
 
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  backdrop-filter: blur(20px);
+  background: rgba(245, 245, 247, 0.4);
+  z-index: 999;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}
+
+body:has(.nav-child3:hover)::after {
+  visibility: visible;
+  opacity: 1;
+}
+
 nav {
   display: flex;
   align-items: center;
@@ -23,7 +40,6 @@ nav {
   background-color: #fff;
   height: 70px;
   z-index: 1000;
-
 }
 
 .nav-child2,
@@ -31,11 +47,17 @@ nav {
   position: relative;
 }
 
-.nav-child2:hover,
-.nav-child6:hover {
-  text-decoration: 3px solid underline rgb(143, 0, 254);
+
+.nav-child2:hover .nav-anchour,
+.nav-child6:hover .nav-anchour,
+.nav-child3:hover .nav-anchour{
+  text-decoration: 4px solid underline rgb(143, 0, 254);
   text-underline-offset: 27px;
-  /* padding-right: -70px; */
+}
+
+.dropdown a {
+  text-decoration: none;
+  color: #000;
 }
 
 .nav-child2:hover .dropdown,
@@ -65,6 +87,58 @@ nav {
   opacity: 0;
   text-wrap: nowrap;
   transition: all 0.2s ease;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.nav-child3:hover .dropdown2 {
+  visibility: visible;
+  opacity: 1;
+} 
+
+.dropdown2 {
+  position: absolute;
+  background-color: #fff;
+  left: 0;
+  right: 0;
+  top: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 50px calc((100% - 1150px)/2);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.dropdown2-child {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.dropdown2-child img {
+  width: 170px;
+}
+
+.dropdown2-child-subchild a{
+  font-size: 22px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000;
+
+}
+
+.dropdown2-child2 a:nth-child(1) {
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  color: #000;
+}
+
+.dropdown2-child-subchild:nth-child(2),
+.dropdown2-child2 p {
+  font-size: 14px;
+  color: rgb(111, 123, 133);
 }
 
 .region-menu {
@@ -102,11 +176,7 @@ nav {
   width: 140px;
 }
 
-.nav-child2 a,
-.nav-child3 a,
-.nav-child4 a,
-.nav-child5 a,
-.nav-child6 a{
+.nav-anchour{
   text-decoration: none;
   color: rgb(24, 25, 31);
   font-size: 16px;
@@ -183,7 +253,6 @@ li img {
 .hero-section {
   background-image: url(Images/herobackground.png);
   /* background-size: cover; */
-  /* padding-top: 80px; */
   padding-top: 30px;
 }
 
@@ -283,7 +352,7 @@ li img {
   text-align: center;
   max-width: 1000px;
   width: 100%;
-  flex: 1;
+  /* flex: 1; */
 }
 
 .Earn-section {
